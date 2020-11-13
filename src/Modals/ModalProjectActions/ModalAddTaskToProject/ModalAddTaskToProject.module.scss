@@ -1,0 +1,257 @@
+@keyframes turnOn {
+  0% {
+      transform: translate(-100%, 100%);
+  }
+  100% {
+    transform: translateY(-50%, -50%)
+  }
+}
+.modal__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal__content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  width: 600px;
+  height: 500px;
+  padding: 30px 0;
+  background-color: #111;
+  transition: 1.1s ease-out;
+  z-index: 1;
+  animation-name: turnOn;
+  animation-duration: 1s;
+  .modal__content__quit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #222;
+    font-size: 20px;
+    right: 5px;
+    top: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover{
+      background-color: #444;
+    }
+  }
+  .modal__content__title {
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 8px 10px 1px rgba(0, 86, 179, 0.35),
+    0 2px 5px 5px rgba(0, 86, 179, 0.35), 
+    0 5px 5px -3px rgba(0, 86, 179, 0.35);
+    transform: scale(0.98);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+  &:hover::before {
+    transform: scale(1);
+  }
+  
+}
+
+.modal__form {
+  margin: 30px 50px;
+  text-align: center;
+}
+.form__taskName {
+  display: flex;
+  position: relative;
+  margin: 0 50px;
+  padding-bottom: 20px;
+
+  .form__taskNameInput{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    transition: 0.5s;
+
+    &:focus ~ label, &:valid ~ label{
+      top: -20px;
+      left: 20px;
+      color: #6eb0f7;
+      font-size: 12px;
+      opacity: 1;
+    }
+    &:focus{
+      border-color: #0056b3;
+    }
+  }
+  
+  .form__taskNameLabel{
+    position: absolute;
+    top:0px;
+    left: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+    opacity: 0.8;
+  }
+}
+.form__addDescription {
+  display: flex;
+  position: relative;
+  margin: 0 50px;
+  padding-bottom: 20px;
+
+  .form__addDescriptionInput{
+    resize: none;
+    width: 100%;
+    max-height: 100px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    transition: 0.5s;
+   &:focus ~ label, &:valid ~ label{
+      top: -20px;
+      left: 20px;
+      color: #6eb0f7;
+      font-size: 12px;
+      opacity: 1;
+    }
+    &:focus{
+      border-color: #0056b3;
+    }
+  }
+  .form__addDescriptionLabel {
+    position: absolute;
+    top:0px;
+    left: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+    opacity: 0.8;
+  }
+}
+
+.form__date {
+  margin: 0 50px 20px 50px;
+  .form__dateLabel {
+    width: 35%;
+    display: inline-block;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+  .form__dateInput {
+    text-align: right;
+    font-size: 14px;
+    display: inline-block;
+    height: 35px;
+    width: 40%;
+    background-color: #111;
+    border: 2px solid #0056b3;
+    color: white;
+    margin: 0 0 0 100px;
+    transition: 0.5s;
+    &:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+  }
+}
+
+.form__checkbox{
+  display: inline-block;
+  width: 35%;
+  text-align: left;
+  padding-left: 60px;
+  .form__checkboxLabel {
+    padding-left: 10px;
+  font-size: 15px;
+  }
+  .form__checkboxInput{
+    box-sizing: content-box;
+    height: 15px;
+    width: 15px;
+    transition: 0.3s;
+    }
+}
+
+.form__chooseProject {
+  display: inline-block;
+  width: 65%;
+  text-align: left;
+  padding-right: 60px;
+  text-align: right;
+  .form__chooseProjectLabel{
+    font-size: 12px;
+    padding-right: 10px;
+  }
+  .form__chooseProjectSelect{
+    height: 35px;
+    width: 35%;
+    padding-left: 10px;
+    background-color: #111;
+    color: white;
+    border: 2px solid #0056b3;
+    transition: 0.5s;
+    font-size: 14px;
+    &:hover{
+      opacity: 0.8;
+      background-color: #444;
+      cursor: pointer;
+      }
+  }
+}
+
+.form__button{
+  padding: 5px 10px;
+  text-transform: uppercase;
+  margin: 20px 20px 0 20px;
+  font-size: 15px; 
+  background-color: #111;
+  border: 2px solid #0056b3;
+  color: white;
+  transition: 0.5s;
+  &:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+  &:disabled {
+    background-color: #111;
+    color: #444;
+  }
+}

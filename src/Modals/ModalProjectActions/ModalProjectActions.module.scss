@@ -1,0 +1,34 @@
+.modal__wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+.modal__content {
+  position: absolute;
+  right: 17%;
+  top: 22%;
+  width: 200px;
+  height: 300px;
+  border: 1px solid #0056b3;
+  background-color: black;
+  z-index: 3;
+  .action {
+    padding: 15px 10px; 
+    color: white;
+    cursor: pointer;
+    svg {
+      font-size: 15px;
+    }
+  span.action__text{
+    font-size: 12px;
+  }
+  &:hover svg,
+  &:hover span{
+  color:  #0056b3;
+  }
+}
+}
+}

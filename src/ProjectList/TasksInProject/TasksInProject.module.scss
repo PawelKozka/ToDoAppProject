@@ -1,0 +1,61 @@
+div {
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .done {
+    padding-top: 30px;
+  }
+}
+div {
+  h2 {
+    text-align: center;
+    display: inline-block;
+    width: 95%;
+  }
+
+}
+
+ .dots__wrapper {
+   display: inline-block;
+   width: 4%;
+   height: 20px;
+   cursor: pointer;
+   &:hover .dots,
+   &:hover .dots:before,
+   &:hover .dots:after
+   {
+    background-color: #999;
+  }
+  .dots {
+    position: relative;
+   display: inline-block;
+   background-color: #555;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   transition: 0.3s;
+ 
+   &:before {
+     position: absolute;
+     left: 13px;
+     content: '';
+   background-color: #555;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   transition: 0.3s;
+   }
+   &:after {
+     position: absolute;
+     left: 26px;
+     content: '';
+   background-color: #555;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   transition: 0.3s;
+   }
+ }
+ }

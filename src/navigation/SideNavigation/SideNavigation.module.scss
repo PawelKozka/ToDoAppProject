@@ -1,0 +1,42 @@
+.row__element {
+    text-align: left;
+    margin: 10px 40px;
+    padding: 30px 0;
+    translate: 0.5s;
+    border-bottom: 1px solid #333;
+    a {
+      padding: 10px 5px;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover{
+        color: #0056b3;
+      }
+    }
+}
+.row__element__project {
+    text-align: left;
+    padding: 30px 0;
+    margin: 10px 40px 10px 40px;
+    transition: 0.5s;
+    border-bottom: 1px solid #333;
+    ul {
+      padding-top: 10px;
+    }
+    span {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      transition:0.5s;
+      cursor: pointer;
+      translate: 0.5s;
+      &:hover{
+        color: #0056b3;
+    }
+    .icon {
+      transition:0.5s;
+    } 
+}
+}
